@@ -21,10 +21,12 @@ public class MC : MonoBehaviour
     {
         myPosition = Vector3.zero;
         myPosition.x = Input.GetAxisRaw("Horizontal");
+        myPosition.y = Input.GetAxis("Vertical");
         if(myPosition != Vector3.zero)
         {
             MoveCharater();
             animator.SetFloat("moveX", myPosition.x);
+            animator.SetFloat("moveY", myPosition.y);
         }
     }
 
