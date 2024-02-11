@@ -8,6 +8,7 @@ public class MC : MonoBehaviour
     private Rigidbody2D myRigidbody;
     private Vector3 myPosition;
     private Animator animator;
+    public Animation Animation;
 
     void Start()
     {
@@ -30,5 +31,9 @@ public class MC : MonoBehaviour
     void MoveCharater()
     {
         myRigidbody.MovePosition(transform.position + myPosition * speed * Time.deltaTime);
+    }
+    private void OnTriggerEnter2D(Collider2D target)
+    {
+
     }
 }
