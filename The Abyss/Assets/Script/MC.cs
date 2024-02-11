@@ -8,7 +8,7 @@ public class MC : MonoBehaviour
     private Rigidbody2D myRigidbody;
     private Vector3 myPosition;
     private Animator animator;
-    public Animation Animation;
+    
 
     void Start()
     {
