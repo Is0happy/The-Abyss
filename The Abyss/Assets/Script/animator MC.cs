@@ -6,7 +6,7 @@ using UnityEngine;
 public class animatorMC : MonoBehaviour
 {
     [SerializeField]
-    private float walkSpeed = 5f;
+    private float walkSpeed = 0.5f;
 
     Animator animator;
 
@@ -73,7 +73,44 @@ public class animatorMC : MonoBehaviour
         }
         else if (xAxis > 0)
         {
-
+            vel.x = walkSpeed;
+            transform.localScale = new Vector2(1, 1);
+            
         }
+        else
+        {
+            vel.x = 0;
+            
+            
+        }
+
+        if(xAxis != 0)
+        {
+            ChangeAnimationState(Walk);
+        }
+        else
+        {
+            ChangeAnimationState(Idle);
+        }
+
+        Rigidbody2D.velocity = vel;
+
+        if (iscrouchPressed)
+        {
+            iscrouchPressed = false;
+            if (!iscrouching)
+            {
+                iscrouching = true;
+            }
+        }
+    }
+
+    void ChangeAnimationState(string newState)
+    {
+        if (currentState == newState) return;
+
+        animator.Play(newState);
+
+        currentState = newState;
     }
 }
