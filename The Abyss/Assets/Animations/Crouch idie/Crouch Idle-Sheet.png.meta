@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f310f8bca8f67594b9e72a8e7caaff7b
+guid: 88987d5bec3cc594c951f81675765dff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle Back-Sheet_0
+      name: Crouch Idle-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6eb188c73aebbee44813fbd40279364a
-      internalID: -2059325591
+      spriteID: e493dc6f515ae234f9c6651f914c6858
+      internalID: 1820404641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_1
+      name: Crouch Idle-Sheet_1
       rect:
         serializedVersion: 2
         x: 48
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63b415879b7f5674bb7747b7a1205644
-      internalID: -2065214726
+      spriteID: 87242337567f18042a32bb0c2272b63e
+      internalID: -755561827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_2
+      name: Crouch Idle-Sheet_2
       rect:
         serializedVersion: 2
         x: 96
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00bb176218bd40b4e959397f9325cc2c
-      internalID: -69236018
+      spriteID: ffc39dc945fcdef46aa0332ca290b350
+      internalID: 2104227219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_3
+      name: Crouch Idle-Sheet_3
       rect:
         serializedVersion: 2
         x: 144
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77554c8a095de2a418c27f14277089bb
-      internalID: -621170252
+      spriteID: b5020c22a1cf60a469cca40b4bc21b25
+      internalID: -1387044257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_4
+      name: Crouch Idle-Sheet_4
       rect:
         serializedVersion: 2
         x: 192
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26d33ebe7accc2d4b9037ca084a32e95
-      internalID: 1228688754
+      spriteID: 949c0782fe384ed4cb4ea6a2c27f5234
+      internalID: -612593670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_5
+      name: Crouch Idle-Sheet_5
       rect:
         serializedVersion: 2
         x: 240
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9c7df54a8ee9634db321a834a44323a
-      internalID: -862935354
+      spriteID: 779048823051a83408462cb1fe0aa434
+      internalID: -974702681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_6
+      name: Crouch Idle-Sheet_6
       rect:
         serializedVersion: 2
         x: 288
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48333f1d9432dce4d91a85235232c78b
-      internalID: -1590122543
+      spriteID: 7f595210e637dcb4bb03d407066bcd3a
+      internalID: -13260494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_7
+      name: Crouch Idle-Sheet_7
       rect:
         serializedVersion: 2
         x: 336
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cc2de8ec3d9b124cabe108f68f152a9
-      internalID: 586511121
+      spriteID: 1778f5307756c1f469144534bb440332
+      internalID: -243662081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_8
+      name: Crouch Idle-Sheet_8
       rect:
         serializedVersion: 2
         x: 384
@@ -292,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4bbd3bb873d8754b82c0f1f5823d672
-      internalID: 2054905244
+      spriteID: 165cd15550944554ba07e6c8b5e0d471
+      internalID: 2094597468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_9
+      name: Crouch Idle-Sheet_9
       rect:
         serializedVersion: 2
         x: 432
@@ -313,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cab063093df7524583a796dfca46ad7
-      internalID: 119940591
+      spriteID: ce036bb27dbeb1443881700038f5bc79
+      internalID: 968958911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_10
+      name: Crouch Idle-Sheet_10
       rect:
         serializedVersion: 2
         x: 480
@@ -334,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21169f6e6d7265942a3450a461dd4f1d
-      internalID: -1766725184
+      spriteID: 7431fe4e29383fe49be7f59d1f3ee8ea
+      internalID: 1855482797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_11
+      name: Crouch Idle-Sheet_11
       rect:
         serializedVersion: 2
         x: 528
@@ -355,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7446ed9d1b352824192e19b25b8abba3
-      internalID: -438831710
+      spriteID: 3230721c1d3d5564caf6c8727950bfac
+      internalID: 1432424221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_12
+      name: Crouch Idle-Sheet_12
       rect:
         serializedVersion: 2
         x: 576
@@ -376,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 509ddf0c5aee10f429551b55fe5b5220
-      internalID: 841103905
+      spriteID: 8333f537d6e900b46aa1d94bb2da829a
+      internalID: -386221696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_13
+      name: Crouch Idle-Sheet_13
       rect:
         serializedVersion: 2
         x: 624
@@ -397,14 +397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fba7621d452086d418bea16e272fe459
-      internalID: -1995647104
+      spriteID: c97812b2cdaafad479c99db00f7598b0
+      internalID: 1886137803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_14
+      name: Crouch Idle-Sheet_14
       rect:
         serializedVersion: 2
         x: 672
@@ -418,14 +418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b9bb4219b17dd746af97b9a1aff655e
-      internalID: -711962642
+      spriteID: ca1bc547b25373148a5f08798a117509
+      internalID: -1843836529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_15
+      name: Crouch Idle-Sheet_15
       rect:
         serializedVersion: 2
         x: 720
@@ -439,14 +439,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf42612e3b0fdef458abbbf8ca7172a9
-      internalID: 226882898
+      spriteID: 44f174fe6cb8ec74d8b56ca89bcb798d
+      internalID: -556598814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_16
+      name: Crouch Idle-Sheet_16
       rect:
         serializedVersion: 2
         x: 768
@@ -460,14 +460,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b0bbbeee28a7c9459a8dbb8342d7189
-      internalID: -1082871486
+      spriteID: 7c3e05eaaa0c112448e30e74eebec056
+      internalID: -1772866485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Back-Sheet_17
+      name: Crouch Idle-Sheet_17
       rect:
         serializedVersion: 2
         x: 816
@@ -481,8 +481,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9f665a1d36ce7445a3f5252a09c2f81
-      internalID: -779176680
+      spriteID: 9a26d760930071649a2410692f5f9fbd
+      internalID: -1345077021
       vertices: []
       indices: 
       edges: []
@@ -498,24 +498,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle Back-Sheet_0: -2059325591
-      Idle Back-Sheet_1: -2065214726
-      Idle Back-Sheet_10: -1766725184
-      Idle Back-Sheet_11: -438831710
-      Idle Back-Sheet_12: 841103905
-      Idle Back-Sheet_13: -1995647104
-      Idle Back-Sheet_14: -711962642
-      Idle Back-Sheet_15: 226882898
-      Idle Back-Sheet_16: -1082871486
-      Idle Back-Sheet_17: -779176680
-      Idle Back-Sheet_2: -69236018
-      Idle Back-Sheet_3: -621170252
-      Idle Back-Sheet_4: 1228688754
-      Idle Back-Sheet_5: -862935354
-      Idle Back-Sheet_6: -1590122543
-      Idle Back-Sheet_7: 586511121
-      Idle Back-Sheet_8: 2054905244
-      Idle Back-Sheet_9: 119940591
+      Crouch Idle-Sheet_0: 1820404641
+      Crouch Idle-Sheet_1: -755561827
+      Crouch Idle-Sheet_10: 1855482797
+      Crouch Idle-Sheet_11: 1432424221
+      Crouch Idle-Sheet_12: -386221696
+      Crouch Idle-Sheet_13: 1886137803
+      Crouch Idle-Sheet_14: -1843836529
+      Crouch Idle-Sheet_15: -556598814
+      Crouch Idle-Sheet_16: -1772866485
+      Crouch Idle-Sheet_17: -1345077021
+      Crouch Idle-Sheet_2: 2104227219
+      Crouch Idle-Sheet_3: -1387044257
+      Crouch Idle-Sheet_4: -612593670
+      Crouch Idle-Sheet_5: -974702681
+      Crouch Idle-Sheet_6: -13260494
+      Crouch Idle-Sheet_7: -243662081
+      Crouch Idle-Sheet_8: 2094597468
+      Crouch Idle-Sheet_9: 968958911
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

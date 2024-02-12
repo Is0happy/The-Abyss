@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eee4e6b2b998bab429d0262bb921bb45
+guid: 95894c08b1f8f3d488ef78ee6788ec37
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run Back-Sheet_0
+      name: Crouch Back-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11df7bd9c98030b4f8f0aa69127218c8
-      internalID: -377197829
+      spriteID: 9759c0b6faef1014d8e5613ae26b3f7c
+      internalID: 704775277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run Back-Sheet_1
+      name: Crouch Back-Sheet_1
       rect:
         serializedVersion: 2
         x: 48
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 741930581543f74478ec2a78392594db
-      internalID: -1969567598
+      spriteID: cee90039b8af2194a8d587dd72967c39
+      internalID: -3286870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run Back-Sheet_2
+      name: Crouch Back-Sheet_2
       rect:
         serializedVersion: 2
         x: 96
@@ -166,113 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1edb2f8a799a069459d2c75d35cd6b6f
-      internalID: -1417467224
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run Back-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b5fdba0550f25240874ec132635608a
-      internalID: 1996113904
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run Back-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c060fd7394caa348871b96777bac263
-      internalID: -1361773171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run Back-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8cc1f0f0980c6fd48bd0afb4dd7f6087
-      internalID: 218362188
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run Back-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87a291d6fc241d8409e13b6c0afe8cd4
-      internalID: 736756127
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run Back-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 0
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85ea1a7e254fee0419854d9e48736fc6
-      internalID: 323560211
+      spriteID: 9251f492b56f4a64aa03fb552e2a1075
+      internalID: -1028133682
       vertices: []
       indices: 
       edges: []
@@ -288,14 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Run Back-Sheet_0: -377197829
-      Run Back-Sheet_1: -1969567598
-      Run Back-Sheet_2: -1417467224
-      Run Back-Sheet_3: 1996113904
-      Run Back-Sheet_4: -1361773171
-      Run Back-Sheet_5: 218362188
-      Run Back-Sheet_6: 736756127
-      Run Back-Sheet_7: 323560211
+      Crouch Back-Sheet_0: 704775277
+      Crouch Back-Sheet_1: -3286870
+      Crouch Back-Sheet_2: -1028133682
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
