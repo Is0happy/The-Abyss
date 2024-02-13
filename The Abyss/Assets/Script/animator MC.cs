@@ -6,7 +6,7 @@ using UnityEngine;
 public class animatorMC : MonoBehaviour
 {
     [SerializeField]
-    private float walkSpeed = 0.5f;
+    private float walkSpeed = 1f;
 
     Animator animator;
 
@@ -20,6 +20,7 @@ public class animatorMC : MonoBehaviour
     private bool isGrounded;
     private string currentAnimation;
     private string currentState;
+    private bool isCrouch;
 
     [SerializeField]
     private float crouchDelay = 1.0f;
@@ -40,16 +41,23 @@ public class animatorMC : MonoBehaviour
 
     void Update()
     {
-        xAxis = Input.GetAxisRaw("Horizontal");
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            walkSpeed = 2f;
+        }
+        else if (Input.GetKey(KeyCode.LeftControl))
+        {
+            walkSpeed = 0.5f;
+            isCrouch = true;
+        }
+        else
+        {
+            walkSpeed = 1f;
+            isCrouch = false;
+        }
 
-        if (Input.GetButtonDown("left shift"))
-        {
-            isrunPressed = true;
-        }
-        if (Input.GetButtonDown("left ctrl"))
-        {
-            iscrouchPressed = true;
-        }
+        xAxis = Input.GetAxis("Horizontal") * walkSpeed;
+        Rigidbody2D.velocity = new Vector2(xAxis ,Rigidbody2D.velocity.y);
     }
 
     private void FixedUpdate()
@@ -84,9 +92,21 @@ public class animatorMC : MonoBehaviour
             
         }
 
-        if(xAxis != 0)
+        if(xAxis != 0 && walkSpeed == 1)
         {
             ChangeAnimationState(Walk);
+        }
+        else if (xAxis != 0 && walkSpeed > 1)
+        {
+            ChangeAnimationState(Run);
+        }
+        else if (xAxis != 0 && walkSpeed < 1 && isCrouch == true)
+        {
+            ChangeAnimationState(Crouch_Walk);
+        }
+        else if (xAxis == 0 && isCrouch == true)
+        {
+            ChangeAnimationState(Crouch_idle);
         }
         else
         {
@@ -103,6 +123,7 @@ public class animatorMC : MonoBehaviour
                 iscrouching = true;
             }
         }
+        
     }
 
     void ChangeAnimationState(string newState)
