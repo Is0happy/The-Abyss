@@ -134,4 +134,9 @@ public class animatorMC : MonoBehaviour
 
         currentState = newState;
     }
+
+    //public void GetAirSprite()
+    //{
+        //int airIndex = (int)Mathf.Clamp();
+    //}
 }
