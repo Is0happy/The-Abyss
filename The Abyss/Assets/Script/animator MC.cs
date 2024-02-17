@@ -13,9 +13,8 @@ public class animatorMC : MonoBehaviour
     private float xAxis;
     private float yAxis;
     private Rigidbody2D Rigidbody2D;
-    private bool iscrouchPressed;
-    private bool isrunPressed;
-    private bool iscrouching;
+    private bool isJumpPressed = false;
+    private float jumpForce = 25f;
     private int groundMask;
     private bool isGrounded;
     private string currentAnimation;
@@ -31,6 +30,7 @@ public class animatorMC : MonoBehaviour
     private string Chrouch = "Chrouch";
     private string Crouch_idle = "Crouch idle";
     private string Crouch_Walk = "Crouch Walk";
+    private string Jump = "Jump";
 
     void Start()
     {
@@ -41,6 +41,11 @@ public class animatorMC : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            isJumpPressed = true;
+        }
+        
         if (Input.GetKey(KeyCode.LeftShift))
         {
             walkSpeed = 2f;
@@ -57,11 +62,13 @@ public class animatorMC : MonoBehaviour
         }
 
         xAxis = Input.GetAxis("Horizontal") * walkSpeed;
-        Rigidbody2D.velocity = new Vector2(xAxis ,Rigidbody2D.velocity.y);
+        yAxis = Rigidbody2D.velocity.y;
+        Rigidbody2D.velocity = new Vector2(xAxis , yAxis);
     }
 
     private void FixedUpdate()
     {
+        
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.1f, groundMask);
 
         if (hit.collider != null)
@@ -73,7 +80,9 @@ public class animatorMC : MonoBehaviour
             isGrounded = false;
         }
 
+        //Chack update movement based on input
         Vector2 vel = new Vector2(0, Rigidbody2D.velocity.y);
+        
         if (xAxis < 0)
         {
             vel.x = -walkSpeed;
@@ -90,6 +99,37 @@ public class animatorMC : MonoBehaviour
             vel.x = 0;
             
             
+        }
+        
+        if (isGrounded)
+        {
+            if (xAxis != 0 && walkSpeed == 1)
+            {
+                ChangeAnimationState(Walk);
+            }
+            else if (xAxis != 0 && walkSpeed > 1)
+            {
+                ChangeAnimationState(Run);
+            }
+            else if (xAxis != 0 && walkSpeed < 1 && isCrouch == true)
+            {
+                ChangeAnimationState(Crouch_Walk);
+            }
+            else if (xAxis == 0 && isCrouch == true)
+            {
+                ChangeAnimationState(Crouch_idle);
+            }
+            else
+            {
+                ChangeAnimationState(Idle);
+            }
+        }
+
+        if (isJumpPressed == true && isGrounded == true)
+        {
+            Rigidbody2D.AddForce(new Vector2(0, jumpForce));
+            isJumpPressed = false;
+            ChangeAnimationState(Jump);
         }
 
         if(xAxis != 0 && walkSpeed == 1)
@@ -112,17 +152,6 @@ public class animatorMC : MonoBehaviour
         {
             ChangeAnimationState(Idle);
         }
-
-        Rigidbody2D.velocity = vel;
-
-        if (iscrouchPressed)
-        {
-            iscrouchPressed = false;
-            if (!iscrouching)
-            {
-                iscrouching = true;
-            }
-        }
         
     }
 
@@ -135,8 +164,5 @@ public class animatorMC : MonoBehaviour
         currentState = newState;
     }
 
-    //public void GetAirSprite()
-    //{
-        //int airIndex = (int)Mathf.Clamp();
-    //}
+    
 }
