@@ -8,16 +8,15 @@ public class animatorMC : MonoBehaviour
     [SerializeField]
     private float walkSpeed = 1f;
 
-    Animator animator;
+    private Animator animator;
 
     private float xAxis;
     private float yAxis;
     private Rigidbody2D Rigidbody2D;
-    private bool isJumpPressed = false;
+    private bool isJumpPressed;
     private float jumpForce = 25f;
     private int groundMask;
     private bool isGrounded;
-    private string currentAnimation;
     private string currentState;
     private bool isCrouch;
 
@@ -36,7 +35,7 @@ public class animatorMC : MonoBehaviour
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        groundMask = 1 << LayerMask.NameToLayer("Ground");
+        groundMask = 1 << LayerMask.NameToLayer("floor");
     }
 
     void Update()
@@ -74,6 +73,7 @@ public class animatorMC : MonoBehaviour
         if (hit.collider != null)
         {
             isGrounded = true;
+            print("isground");
         }
         else
         {
@@ -125,14 +125,16 @@ public class animatorMC : MonoBehaviour
             }
         }
 
-        if (isJumpPressed == true && isGrounded == true)
+        if (isJumpPressed && isGrounded)
         {
             Rigidbody2D.AddForce(new Vector2(0, jumpForce));
             isJumpPressed = false;
             ChangeAnimationState(Jump);
         }
 
-        if(xAxis != 0 && walkSpeed == 1)
+        Rigidbody2D.velocity = vel;
+
+        if (xAxis != 0 && walkSpeed == 1)
         {
             ChangeAnimationState(Walk);
         }
