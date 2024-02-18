@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using Unity.Burst.CompilerServices;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class animatorMC : MonoBehaviour
 {
@@ -10,6 +14,7 @@ public class animatorMC : MonoBehaviour
 
     [Range(0f, 500f)]
     public float jumpForce = 100f;
+    public int DeadsceneIndex;
 
     private Animator animator;
 
@@ -153,7 +158,6 @@ public class animatorMC : MonoBehaviour
         {
             ChangeAnimationState(Idle);
         }
-        
     }
 
     void ChangeAnimationState(string newState)
@@ -164,4 +168,12 @@ public class animatorMC : MonoBehaviour
 
         currentState = newState;
     }
+    
+        public void Dead()
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(DeadsceneIndex);
+    }
+
+    
+    
 }

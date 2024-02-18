@@ -1737,6 +1737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 1
   jumpForce: 50
+  DeadsceneIndex: 2
 --- !u!61 &819977973
 BoxCollider2D:
   m_ObjectHideFlags: 0
