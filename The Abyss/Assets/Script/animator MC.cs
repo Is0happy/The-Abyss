@@ -8,8 +8,8 @@ public class animatorMC : MonoBehaviour
     [SerializeField]
     private float walkSpeed = 1f;
 
-    [Range(0f, 50f)]
-    public float jumpForce = 25f;
+    [Range(0f, 500f)]
+    public float jumpForce = 100f;
 
     private Animator animator;
 
@@ -66,7 +66,7 @@ public class animatorMC : MonoBehaviour
     private void FixedUpdate()
     {
         
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.35f, groundMask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.1f, groundMask);
 
         if (hit.collider != null)
         {
@@ -124,7 +124,7 @@ public class animatorMC : MonoBehaviour
             }
         }
 
-        if (isJumpPressed == true && isGrounded == true)
+        if (isJumpPressed == true && isGrounded == true && isCrouch == false)
         {
             Rigidbody2D.AddForce(new Vector2(0, jumpForce));
             isJumpPressed = false;
