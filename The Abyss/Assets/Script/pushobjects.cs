@@ -38,12 +38,17 @@ public class pushobjects : MonoBehaviour
             rock.GetComponent<FixedJoint2D>().enabled = true;
             rock.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
             isGrounded = true;
-            ChangeAnimationState(Pushs_Idle);
+            
         }
         else if (Input.GetKeyUp(KeyCode.E))
         {
             rock.GetComponent<FixedJoint2D>().enabled = false;
-            ChangeAnimationState(Idle);
+            
+        }
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            ChangeAnimationState(Pushs_Idle);
         }
 
 
