@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex)
     }
 
-    IEnumerator LoadAsynchronously ()]
+    IEnumerator LoadAsynchronously ()
     {
         
     }
