@@ -173,7 +173,5 @@ public class animatorMC : MonoBehaviour
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(DeadsceneIndex);
     }
-
-    
     
 }
