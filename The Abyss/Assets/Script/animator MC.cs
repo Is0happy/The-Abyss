@@ -76,12 +76,12 @@ public class animatorMC : MonoBehaviour
         if (hit.collider != null)
         {
             isGrounded = true;
-            print("isground");
+            //print("isground");
         }
         else
         {
             isGrounded = false;
-            print("notsiground");
+            //print("notsiground");
         }
 
         //Chack update movement based on input
