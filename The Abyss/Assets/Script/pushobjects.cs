@@ -22,6 +22,10 @@ public class pushobjects : MonoBehaviour
         if (hit.collider != null && Input.GetKey(KeyCode.E))
         {
             rock = hit.collider.gameObject;
+
+            rock.GetComponent<FixedJoint2D>().enabled = true;
+            rock.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
+            print("yes");
         }
     }
 
