@@ -168,9 +168,23 @@ public class animatorMC : MonoBehaviour
 
         currentState = newState;
     }
-    
-        public void Dead()
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Dead Zone"))
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        StartCoroutine(DeadScene(0.2f));
+    }
+
+    IEnumerator DeadScene(float duration)
+    {
+        yield return new WaitForSeconds(duration);
         AsyncOperation operation = SceneManager.LoadSceneAsync(DeadsceneIndex);
     }
     
