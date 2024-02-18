@@ -35,7 +35,7 @@ public class animatorMC : MonoBehaviour
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        groundMask = 1 << LayerMask.NameToLayer("floor");
+        groundMask = 1 << LayerMask.NameToLayer("Ground");
     }
 
     void Update()
