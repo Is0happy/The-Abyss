@@ -1600,6 +1600,7 @@ GameObject:
   - component: {fileID: 819977968}
   - component: {fileID: 819977969}
   - component: {fileID: 819977972}
+  - component: {fileID: 819977974}
   - component: {fileID: 819977973}
   m_Layer: 0
   m_Name: Player
@@ -1782,6 +1783,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.22025312, y: 0.48883218}
   m_EdgeRadius: 0
+--- !u!114 &819977974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819977965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1496610bae4468c4483ec19f81f826bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0.2
+  RockMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &834541240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,6 +1888,7 @@ GameObject:
   - component: {fileID: 844046969}
   - component: {fileID: 844046972}
   - component: {fileID: 844046971}
+  - component: {fileID: 844046973}
   m_Layer: 6
   m_Name: Rock_0
   m_TagString: Untagged
@@ -2017,6 +2035,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.47522628, y: 0.31840748}
   m_EdgeRadius: 0
+--- !u!255 &844046973
+FixedJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844046968}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0.833, y: -0.87}
+  m_DampingRatio: 0
+  m_Frequency: 0
 --- !u!1 &850307054
 GameObject:
   m_ObjectHideFlags: 0
