@@ -35,7 +35,7 @@ public class animatorMC : MonoBehaviour
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        //groundMask = 1 << LayerMask.NameToLayer("Ground");
+        groundMask = 1 << LayerMask.NameToLayer("Ground");
     }
 
     void Update()
@@ -61,24 +61,23 @@ public class animatorMC : MonoBehaviour
         }
 
         xAxis = Input.GetAxis("Horizontal") * walkSpeed;
-        yAxis = Rigidbody2D.velocity.y;
-        //Rigidbody2D.velocity = new Vector2(xAxis , yAxis);
     }
 
     private void FixedUpdate()
     {
         
-        //RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.1f, groundMask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.35f, groundMask);
 
-        //if (hit.collider != null)
-        //{
-            //isGrounded = true;
-            //print("isground");
-        //}
-        //else
-        //{
-            //isGrounded = false;
-        //}
+        if (hit.collider != null)
+        {
+            isGrounded = true;
+            print("isground");
+        }
+        else
+        {
+            isGrounded = false;
+            print("notsiground");
+        }
 
         //Chack update movement based on input
         Vector2 vel = new Vector2(0, Rigidbody2D.velocity.y);
@@ -165,18 +164,4 @@ public class animatorMC : MonoBehaviour
 
         currentState = newState;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.name == "GameObject")
-        {
-            isGrounded = true;
-            print("isGround");
-        }
-        else
-        {
-            isGrounded = false;
-            print("NotisGround");
-        }
-    }
-
 }
