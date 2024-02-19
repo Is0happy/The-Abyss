@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dead Drop.unity
     guid: 7ca00d67365e2fa44bdd1f7c50c0e951
+  - enabled: 1
+    path: Assets/Scenes/To Be Continue.unity
+    guid: 1f7da8831aabeba4db3a038ea9aaf1ac
   m_configObjects: {}
