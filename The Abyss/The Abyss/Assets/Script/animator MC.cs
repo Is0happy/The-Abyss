@@ -30,6 +30,7 @@ public class animatorMC : MonoBehaviour
     private bool isCrouch;
     public float distance = 1f;
     public LayerMask RockMask;
+    private bool isMovingRock;
 
 
     private string Idle = "idie";
@@ -40,6 +41,8 @@ public class animatorMC : MonoBehaviour
     private string Jump = "Jump";
     private string Pushs = "pushs";
     private string Pushs_Idle = "push_Idle";
+
+    GameObject rock;
 
     void Start()
     {
@@ -72,6 +75,25 @@ public class animatorMC : MonoBehaviour
 
 
         xAxis = Input.GetAxis("Horizontal") * walkSpeed;
+
+        Physics2D.queriesStartInColliders = false;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * transform.localScale.x, distance, RockMask);
+        if (hit.collider != null && hit.collider.gameObject.tag == "pushable" && Input.GetKey(KeyCode.E))
+        {
+            rock = hit.collider.gameObject;
+
+            rock.GetComponent<FixedJoint2D>().enabled = true;
+            rock.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
+            rock.GetComponent<rockpull>().beingPushed = true;
+            isMovingRock = true;
+
+        }
+        else if (Input.GetKeyUp(KeyCode.E))
+        {
+            rock.GetComponent<FixedJoint2D>().enabled = false;
+            rock.GetComponent<rockpull>().beingPushed = false;
+            isMovingRock = false;
+        }
     }
 
     private void FixedUpdate()
@@ -113,6 +135,10 @@ public class animatorMC : MonoBehaviour
         
         if (isGrounded == true)
         {
+            //if (xAxis != 0 && isMovingRock == true && isCrouch == false && walkSpeed != 0)
+            //{
+                //ChangeAnimationState(Pushs);
+            //}
             if (xAxis != 0 && walkSpeed == 1)
             {
                 ChangeAnimationState(Walk);
@@ -144,6 +170,10 @@ public class animatorMC : MonoBehaviour
 
         Rigidbody2D.velocity = vel;
 
+        if (xAxis != 0 && isMovingRock == true && isCrouch == false && walkSpeed != 0)
+        {
+            ChangeAnimationState(Pushs);
+        }
         if (xAxis != 0 && walkSpeed == 1)
         {
             ChangeAnimationState(Walk);
@@ -160,6 +190,14 @@ public class animatorMC : MonoBehaviour
         {
             ChangeAnimationState(Crouch_idle);
         }
+        else if (xAxis == 0 && isMovingRock == true)
+        {
+            ChangeAnimationState(Pushs_Idle);
+        }
+        else if (xAxis != 0 && isMovingRock == true)
+        {
+            ChangeAnimationState(Pushs);
+        }
         else
         {
             ChangeAnimationState(Idle);
@@ -175,5 +213,10 @@ public class animatorMC : MonoBehaviour
 
         currentState = newState;
     }
-    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + Vector2.right * transform.localScale.x * distance);
+    }
+
 }
