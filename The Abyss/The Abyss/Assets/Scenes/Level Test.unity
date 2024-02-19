@@ -201,8 +201,8 @@ Transform:
   m_GameObject: {fileID: 14975703}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6131029, y: 0.60682315, z: 3.0624344}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.6131029, y: 0.25, z: 3.0624344}
+  m_LocalScale: {x: 1, y: 1.41, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1359101716}
@@ -2523,7 +2523,7 @@ Transform:
   m_GameObject: {fileID: 1285826949}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.26, y: -2.043, z: 0}
+  m_LocalPosition: {x: 9.26, y: -1.97, z: 0}
   m_LocalScale: {x: 5.936758, y: 0.83144015, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3582,6 +3582,7 @@ GameObject:
   - component: {fileID: 1636284807}
   - component: {fileID: 1636284806}
   - component: {fileID: 1636284805}
+  - component: {fileID: 1636284808}
   m_Layer: 8
   m_Name: wood base_1
   m_TagString: Untagged
@@ -3598,7 +3599,7 @@ Transform:
   m_GameObject: {fileID: 1636284803}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.651, z: 0}
+  m_LocalPosition: {x: 0, y: -1.00022, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3647,7 +3648,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.07}
+  m_Size: {x: 0.75, y: 0.16}
   m_EdgeRadius: 0
 --- !u!61 &1636284806
 BoxCollider2D:
@@ -3746,6 +3747,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1636284808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636284803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a7e5d1e42a5fc43a0db175e054dd32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posA: {fileID: 1177685942}
+  posB: {fileID: 1309244552}
+  speed: 0.5
 --- !u!1 &1717951305
 GameObject:
   m_ObjectHideFlags: 0
@@ -3756,10 +3772,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1717951306}
   - component: {fileID: 1717951307}
+  - component: {fileID: 1717951309}
   - component: {fileID: 1717951308}
   m_Layer: 0
   m_Name: Check base
-  m_TagString: Untagged
+  m_TagString: pushable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3773,8 +3790,8 @@ Transform:
   m_GameObject: {fileID: 1717951305}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.731, y: 0.328, z: 0.0014975071}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.48, z: 0.0014975071}
+  m_LocalScale: {x: 1, y: 0.28, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1322003881}
@@ -3824,7 +3841,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1717951308
+--- !u!50 &1717951308
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717951305}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1717951309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3833,9 +3877,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1717951305}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac51a7de1aaa7dc4c8e4e477ed3272a1, type: 3}
+  m_Script: {fileID: 11500000, guid: ef43f3ddcdcf18d47bc0d58818631b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leadingPlatform: {fileID: 1364700208}
 --- !u!1 &1759433667
 GameObject:
   m_ObjectHideFlags: 0
