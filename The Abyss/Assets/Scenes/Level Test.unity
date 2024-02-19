@@ -1958,7 +1958,11 @@ Transform:
   m_GameObject: {fileID: 844046968}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 8.873, y: -0.988, z: -2.05}
+=======
+  m_LocalPosition: {x: 0.83, y: -1.13, z: -2.05}
+>>>>>>> 2758f568d18387802dd3f7e6290f62e7719ed431
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2007,7 +2011,11 @@ FixedJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
+<<<<<<< HEAD
   m_ConnectedAnchor: {x: 0.833, y: -0.87}
+=======
+  m_ConnectedAnchor: {x: 0.83, y: -1.13}
+>>>>>>> 2758f568d18387802dd3f7e6290f62e7719ed431
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!70 &844046974
@@ -2042,8 +2050,13 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
+<<<<<<< HEAD
   m_Offset: {x: -0.007117003, y: 0.20726162}
   m_Size: {x: 0.43036157, y: 0.43036157}
+=======
+  m_Offset: {x: 0, y: 0.14}
+  m_Size: {x: 0.32, y: 0.52}
+>>>>>>> 2758f568d18387802dd3f7e6290f62e7719ed431
   m_Direction: 0
 --- !u!1 &850307054
 GameObject:
