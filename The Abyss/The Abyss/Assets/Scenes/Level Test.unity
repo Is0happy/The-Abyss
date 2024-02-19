@@ -1804,6 +1804,10 @@ MonoBehaviour:
   walkSpeed: 1
   jumpForce: 50
   DeadsceneIndex: 2
+  distance: 1
+  RockMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &819977973
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1861,6 +1865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1496610bae4468c4483ec19f81f826bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkSpeed: 1
   distance: 0.2
   RockMask:
     serializedVersion: 2
@@ -3291,8 +3296,8 @@ Transform:
   m_GameObject: {fileID: 1464994666}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1065531, y: 0.5898232, z: 3.0624344}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.1065531, y: 0.04, z: 3.0624344}
+  m_LocalScale: {x: 1, y: 1.51, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1359101716}
@@ -3579,7 +3584,7 @@ Transform:
   m_GameObject: {fileID: 1636284803}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.999, z: 0}
+  m_LocalPosition: {x: 0, y: 0.651, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3817,8 +3822,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac51a7de1aaa7dc4c8e4e477ed3272a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leadingPlatform: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1759433667
 GameObject:
   m_ObjectHideFlags: 0
