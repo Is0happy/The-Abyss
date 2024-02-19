@@ -40,6 +40,10 @@ public class MovingPlaform : MonoBehaviour
         {
             isTouch = true;
         }
+        else if (collision.CompareTag("pushable"))
+        {
+            isTouch = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
