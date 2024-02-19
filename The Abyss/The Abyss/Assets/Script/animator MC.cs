@@ -6,11 +6,12 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEditor.ShaderData;
 
 public class animatorMC : MonoBehaviour
 {
     [SerializeField]
-    private float walkSpeed = 1f;
+    public float walkSpeed = 1f;
 
     [Range(0f, 500f)]
     public float jumpForce = 100f;
@@ -27,6 +28,8 @@ public class animatorMC : MonoBehaviour
     private bool isGrounded;
     private string currentState;
     private bool isCrouch;
+    public float distance = 1f;
+    public LayerMask RockMask;
 
 
     private string Idle = "idie";
@@ -35,6 +38,8 @@ public class animatorMC : MonoBehaviour
     private string Crouch_idle = "Crouch idle";
     private string Crouch_Walk = "Crouch Walk";
     private string Jump = "Jump";
+    private string Pushs = "pushs";
+    private string Pushs_Idle = "push_Idle";
 
     void Start()
     {
@@ -64,6 +69,7 @@ public class animatorMC : MonoBehaviour
             walkSpeed = 1f;
             isCrouch = false;
         }
+
 
         xAxis = Input.GetAxis("Horizontal") * walkSpeed;
     }
@@ -158,6 +164,7 @@ public class animatorMC : MonoBehaviour
         {
             ChangeAnimationState(Idle);
         }
+
     }
 
     void ChangeAnimationState(string newState)
